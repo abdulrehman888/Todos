@@ -1,8 +1,8 @@
 import React ,  {Component} from 'react';
 import  {FormControl , InputGroup  , Button} from 'react-bootstrap'
 
-function PrintTodos( { oTodos }  ) {
-
+function PrintTodos( { oTodos , deleteTodo , editTodo  }  ) {
+// console.log('tempValue' , tempValue);
 
 
     // const todosList = oTodos.map((value , index) => console.log(value , "index" , index));
@@ -20,9 +20,18 @@ function PrintTodos( { oTodos }  ) {
                     />
                     <InputGroup.Append>
                         <Button variant="outline-secondary"
-                        value={index}
+                                value={index}
+
+                                onClick={(event) => deleteTodo(event.target.value)}
+                                // onClick={() => console.log(deleteTodo)}
                         >
                             Delete</Button>
+                        <Button variant="outline-secondary"
+                                value={ index }
+                                onClick={() => editTodo(index)}
+                                // onClick={() => console.log(value)}
+                        >
+                            Edit</Button>
                     </InputGroup.Append>
                 </InputGroup>
             </div>
