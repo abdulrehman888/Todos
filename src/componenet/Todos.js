@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import PrintTodo from './PrintTodo'
-import 'bootstrap/dist/css/bootstrap.css';
+import  AddTodos from './AddTodos'
+
 class Todos extends Component {
     constructor(props) {
         super(props);
@@ -9,10 +10,18 @@ class Todos extends Component {
         }
     }
 
+    addTodo = (value) =>{
+        console.log( 'value' , value);
+        const  todos = [...this.state.todos , value];  // this will add new value
+        this.setState({
+            todos
+        })
+    }
 
     render() {
         return (
             <div>
+                <AddTodos addTodo={this.addTodo}/>
                <PrintTodo oTodos={this.state.todos} oTodos2={this.state.todos}/>
             </div>
         );
