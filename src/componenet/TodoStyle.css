@@ -1,0 +1,22 @@
+.PrintTodo{
+    width:  400px;
+    /*text-align: center;*/
+    margin-left: 50%;
+
+}
+
+ul {
+    width: 30%;
+    margin-left: 30%;
+    /*border: 1px solid ;*/
+}
+
+.InputGroup{
+    width: 60%;
+    margin-left: 20%;
+}
+
+.General{
+    margin-top: 30px;
+}
+

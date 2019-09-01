@@ -11,12 +11,12 @@ class AddTodos extends Component {
     }
 
     render() {
-        const {pEditMode, pTempValue} = this.props;
+        const {pEditMode, pTempValue , addTodo , } = this.props;
         //
         return (
 
             <div>
-                <InputGroup className="mb-3">
+                <InputGroup className="mb-3 ">
                     <FormControl
                         placeholder="Add todos..."
                         aria-label="Recipient's username"
@@ -30,7 +30,7 @@ class AddTodos extends Component {
                                 // console.log( 'temp value', this.state.tempValue)
                                 console.log('prps add todos ', this.props);
                                 if (pEditMode) {
-                                    this.props.addTodo(this.state.tempValue)
+                                    addTodo(this.state.tempValue)
                                 }
                             }
 

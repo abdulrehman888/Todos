@@ -6,7 +6,7 @@ class Todos extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            todos: ["abdul", 'rehman', 'kaim'],
+            todos: [],
             tempValue: '',
             editMode: false,
             idTodo: null
@@ -33,7 +33,8 @@ class Todos extends Component {
         console.log('value', this.state.tempValue);
         const todos = [...this.state.todos, this.state.tempValue];  // this will add new value
         this.setState({
-            todos
+            todos,
+            tempValue : ''
         })
     }
 
@@ -74,10 +75,11 @@ class Todos extends Component {
     render() {
         const {tempValue, editMode} = this.state;
         return (
-            <div>
+            <div className="General">
+                <h1> Hello Todo...</h1>
 
-                <div>
-                    <InputGroup className="mb-3">
+                <div className="InputGroup">
+                    <InputGroup className="mb-3  ">
                         <FormControl
                             placeholder="Add todos..."
                             aria-label="Recipient's username"
