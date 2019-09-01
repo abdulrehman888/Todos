@@ -10,7 +10,7 @@ function PrintTodos( { oTodos , deleteTodo , editTodo  }  ) {
     {
         return (
             <div>
-                <InputGroup className="mb-3">
+                <InputGroup className="mb-3 d-print-none">
                     <FormControl
                         placeholder="Recipient's username"
                         aria-label="Recipient's username"
@@ -29,7 +29,7 @@ function PrintTodos( { oTodos , deleteTodo , editTodo  }  ) {
                         <Button variant="outline-secondary"
                                 value={ index }
                                 onClick={() => editTodo(index)}
-                                // onClick={() => console.log(value)}
+                                // onClick={() => console.log(index)}
                         >
                             Edit</Button>
                     </InputGroup.Append>
